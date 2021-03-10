@@ -4,9 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint .",
+    "prepare": "ncc build index.js -o dist --source-map --license licenses.txt",
+    "test": "jest",
+    "all": "npm run lint && npm run prepare && npm run test"
   },
-  "keywords": [],
+  "keywords": [
+    "GitHub",
+    "Actions",
+    "JavaScript",
+    "ULL",
+    "Procesadores de Lenguajes"
+  ],
   "author": "Alejandro Peraza-Gonzalez <alu0101211770@ull.edu.es> (https://github.com/alu0101211770)",
   "license": "ISC",
   "dependencies": {
